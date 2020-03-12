@@ -12,11 +12,12 @@ rm -rf /Library/Receipts/mysql*
 rm -rf /Library/Receipts/MySQL*
 rm -rf /private/var/db/receipts/*mysql*
 rm -rf /usr/bin/mysql*
-echo "Moving my.cnf to Desktop"
-mv /etc/my.cnf ~/Desktop/my-old.cnf.bak
+echo "Moving my.cnf to my.cnf.bak"
+mv /etc/my.cnf /etc/my.cnf.bak
 echo "This script has finished removing MySQL from the system, and will now remove it from any startup or launch processes."
 rm -rf /Library/LaunchDaemons/*mysql*
 rm -rf /Library/LaunchAgents/*mysql*
 rm -rf /System/Library/LaunchDaemons/*mysql*
 rm -rf /System/Library/LaunchAgents/*mysql*
 echo "Finished! Please restart the entire server."
+exit 0
